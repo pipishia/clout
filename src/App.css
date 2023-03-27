@@ -1,0 +1,85 @@
+body {
+  font-family:"Segoe UI", "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.text-center {
+  margin: 2% auto;
+  text-align: center;
+}
+
+
+
+/* Divider Style */
+.divider--light,
+.divider--dark {
+  width: 250px;
+  border-top: solid 5px;
+  margin: 3% auto;
+  opacity: 0.7;
+}
+
+.divider--light {
+  border-color: #fff;
+}
+
+.divider--dark {
+  border-color: #2c3e50;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  align-self: center;
+  margin: auto;
+  padding-left: 10px;
+  padding-right:10px;
+}
+
+@media (min-width: 576px){
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px){
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px){
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px){
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1600px){
+  .container {
+    width: 1500px;
+  }
+}

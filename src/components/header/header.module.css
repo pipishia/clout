@@ -1,0 +1,53 @@
+.header {
+    background-color: #00979c;
+    height: auto;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .header {
+      font-size: 1rem;
+    }
+  }
+  
+  .headerAvatar {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .headerTitle {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .headerSlogan {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  @media screen and (min-width: 768px) {
+     .headerAvatar {
+        width: 14rem;
+        height: 14rem;
+      }
+      
+      .headerTitle {
+        font-size: 3em;
+        text-transform: uppercase;
+        font-weight: 200;
+      }
+      
+      .slogan {
+        font-size: 1.75em;
+        text-transform: uppercase;
+        margin: 0;
+      }
+   }
