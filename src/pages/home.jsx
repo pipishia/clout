@@ -5,11 +5,11 @@ import Text from "../components/text/text"
 function Home() {
     return (
         <div>
-            <Header />
-            <Images />
-            <Text />
-            <Footer />
-        </div>
+         <Header />
+        <Images />
+        <Text />
+        <Footer />
+       </div>
     );
 }
 export default Home

@@ -1,18 +1,19 @@
-
+import style from './Content.module.css'
 export default function Content(){
     return (
+    
     <div class = "container">
-        <div className = "buy">
-            <img src = "" className = "image"> </img>
-            <div className = "ticket">
-                <div className = "title"> aaa </div>
+        <div className >
+            <img src = "" className > </img>
+            <div className >
+                <div className = {style.text}> aaa </div>
                 
-                <div className = "pricebox"> 
+                <div className = {style.pricebox}x> 
                     <div className = "price"></div>
                 </div>
                 
-                <div class = "item_container">
-                    <div className = "word"> SORT </div>
+                <div className = "item_container">
+                    <div className = {style.word}> SORT </div>
                     <div className = "sort">
                         <div className = "sort_button"> 
                             <div className=" sort_title"> </div>
@@ -26,11 +27,12 @@ export default function Content(){
                 </div>
             </div>
         </div>
+        
 
-        <article className="description__layout">
+        <article className={style.description__layout}>
                     <h1>DESCRIPTIONS</h1>
                     <hr className="divider--light" />
-                    <p className="text-justify description__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium laborum
+                    <p className={style.descriptionContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium laborum
                         corrupti ut iure aliquam. Quod, perferendis. Libero tempore iste, animi sint numquam illum quasi laboriosam
                         unde pariatur quidem! Suscipit consequatur nihil dolor impedit temporibus ad cum, voluptatum odit ratione
                         ullam
@@ -43,9 +45,8 @@ export default function Content(){
                         repudiandae temporibus! Saepe excepturi tempore iusto eos sit!</p>
                 
             </article>
-
-        
     </div>
+    
     );
 
 }
