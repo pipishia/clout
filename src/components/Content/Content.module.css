@@ -1,0 +1,17 @@
+.description__layout{
+    color: black;
+}
+.descriptionContent {
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    font-size: 16px;
+    text-indent: 3rem;
+    line-height: 1.5rem;
+    color: black
+  }
+  .text{
+    font-size: 16px;
+    text-indent: 3rem;
+    line-height: 1.5rem;
+    color: black
+  }
