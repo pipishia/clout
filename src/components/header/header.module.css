@@ -1,5 +1,5 @@
 .header {
-    background-color: #00979c;
+    background-color: #6cace4;
     height: auto;
     color: #fff;
     font-size: 0.8rem;
@@ -28,7 +28,10 @@
     text-transform: uppercase;
     margin: 0;
   }
-  
+  .headerpic{
+    width: 1rem;
+    height: 1rem;
+  }
   @media screen and (min-width: 768px) {
      .headerAvatar {
         width: 14rem;
