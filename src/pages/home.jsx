@@ -1,11 +1,11 @@
 import Header from "../components/header/header"
 import Footer from "../components/footer/footer"
-import Images from "../components/images/images"
+import Masonry from "../components/masonry/masonry"
 function Home() {
     return (
         <div>
          <Header />
-        <Images />
+       <Masonry/>
         <Footer />
        </div>
     );

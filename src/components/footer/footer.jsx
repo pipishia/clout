@@ -12,15 +12,26 @@ export default function Footer() {
               lg={{ span: 20 }}
             >
               <h5 className={style.footerDescription}>
-                臺北市和平東路二段134號，國立臺北教育大學 數位科技設計學系
+                客戶服務
               </h5>
+              <ul className={style.footerlist1}>
+                <li className={style.footerItem}><a href="" className={style.footerabout}>票務服務單位：拓元股份有限公司／統一編號54651107</a></li>
+                <li className={style.footerItem}><a href="" className={style.footerabout}>客服專線：+886 (02) 8772-9835</a></li>
+                <li className={style.footerItem}><a href="" className={style.footerabout}>客服信箱：聯繫我們</a></li>
+                <li className={style.footerItem}><a href="" className={style.footerabout}>客服時間：週一 ~ 週五 10:00-12:30 | 13:30-18:00</a></li>
+              </ul>
+
+
             </Col>
             <Col
               xs={{ span: 24 }}
               sm={{ span: 24 }}
               lg={{ span: 4 }}
             >
-              <ul className={style.footerlist}>
+                <h5 className={style.footerDescription}>
+                相關連結
+              </h5>
+              <ul className={style.footerlist2}>
                 <li className={style.footerItem}><a href="" className={style.footerlink}><i className="fab fa-facebook-f"></i></a></li>
                 <li className={style.footerItem}><a href="" className={style.footerlink}><i className="fab fa-google-plus-g"></i></a></li>
                 <li className={style.footerItem}><a href="" className={style.footerlink}><i className="fab fa-linkedin-in"></i></a></li>
@@ -33,7 +44,7 @@ export default function Footer() {
       <div className={style.footerBelow}>
         <div className="container">
           <h6>
-            &copy; Copyright All rights reserved.
+            &copy; Clout copyright All rights reserved.
           </h6>
         </div>
       </div>

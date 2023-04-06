@@ -1,0 +1,20 @@
+.cartSummary {
+    display: inline-block;
+    top: 1.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    margin-left: 3%;
+    margin-right: 8%;
+  }
+  
+  .cartText {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: -4px;
+  }
+ 
+  @media (min-width: 768px) {
+    .cartSummary {
+       right: 1.5rem;
+    }
+  }
