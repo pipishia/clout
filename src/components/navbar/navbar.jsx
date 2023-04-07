@@ -1,27 +1,38 @@
 import { NavLink } from 'react-router-dom';
-import styles from './navbar.module.css';
+import './navbar.css';
 import { Row, Col } from 'antd';
 import 'antd/dist/reset.css'
 import { useState } from "react";
 import CartSummary from '../cartsummary/cart'
-export default function NavBar() {
-    return (
-    <div class={styles.navbar}>  
-    <a>  <h1 className={styles.new}>home{title}</h1></a>
-       <a>  <h1 className={styles.new}>news{title}</h1></a>
-       <div class={styles.wrap}>
-                   <div class={styles.flwrap}>
-                           <div class={styles.mainsearchinputitem}>
-                               <input type="text"  value="" placeholder="..."/>
-                               <button class={styles.searchbutton}>Search</button>
-                           </div>
-                       </div>
-                   </div>
-                   <div class={styles.user}>
-                    <button class={styles.signbutton}>Sign Up</button>
-                    <button class={styles.loginbutton}>Login</button>
+
+const Nav =()=>{
+    const [navOpen, setnavOpen] = useState(false);
+return(
+    <div className="nav">
+        <div className="nav-container">
+            <div className="navbar">
+                <div className="menu-toggle" onClick={() => setnavOpen(!navOpen)}>
+                    <div  className={navOpen ? "hambox hamboxOpen": "hambox"}>
+                        <span  className={navOpen ? "linetop spin": "linetop"}></span>
+                        <span  className={navOpen ? "linebottom spin": "linebottom"}></span>
                     </div>
-               <CartSummary/>          
-   </div>
-    );
+                </div>
+            </div>
+            <div className="nav-overlay" style={{top:navOpen ? "0" : "-100%",transitionDelay:navOpen ? "0s" : "0s"}}></div>
+        </div>
+    </div>
+)
 }
+
+export default Nav
+
+
+
+
+
+
+// export default function NavBar() {
+//     return (
+  
+//     );
+// }
