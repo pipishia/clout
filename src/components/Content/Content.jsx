@@ -1,52 +1,196 @@
 import style from './Content.module.css'
-export default function Content(){
+import { Row, Col } from "antd";
+import { InputNumber, Space } from 'antd';
+
+
+
+
+export default function Content() {
+    const onChange = (value) => {
+        console.log('changed', value);
+      };
+   
     return (
-    
-    <div class = "container">
-        <div className >
-            <img src = "" className > </img>
-            <div className >
-                <div className = {style.text}> aaa </div>
-                
-                <div className = {style.pricebox}x> 
-                    <div className = "price"></div>
-                </div>
-                
-                <div className = "item_container">
-                    <div className = {style.word}> SORT </div>
-                    <div className = "sort">
-                        <div className = "sort_button"> 
-                            <div className=" sort_title"> </div>
+
+        <div className={style.container}>
+            <div className={style.all}>
+
+                <Row gutter={[24, 24]}>
+                    <Col
+                        sm={{ span: 24 }}
+                        md={{ span: 24 }}
+                        lg={{ span: 12 }}
+                        xl={{ span: 12 }}
+                    >
+                        <div className={style.pic}>
+                            <a href="" className={style.imagelink}>
+                                <img src="images\RapEvent.jpg" alt="" className={style.pic_style} />
+                            </a>
                         </div>
-                    </div>
+                    </Col>
+                    <Col
+                        sm={{ span: 24 }}
+                        md={{ span: 24 }}
+                        lg={{ span: 12 }}
+                        xl={{ span: 12 }}
+                    >
+                    <div className = {style.big_info}>
+                        <div class = {style.info_container}>
+                            <div className={style.title}>HollyFish </div>
+                            <div className={style.info_wrapper}>
+                                <div className= {style.info_col}>
+                                    <div className = {style.info_title}> 開始時間: </div>
+                                    <div className = {style.info_text}> 2023/05/31 19:30 (+0800) </div>
+                                </div>
+                                <div className= {style.info_col}>
+                                    <div className = {style.info_title}> 活動地點: </div>
+                                    <div className = {style.info_text}> PIPE 水管音樂</div>
+                                </div>
+                                <div className= {style.info_col}>
+                                    <div className = {style.info_title}> 主辦單位: </div>
+                                    <div className = {style.info_text}> 山腳下音樂工作室</div>
+                                </div>
+                                <div className= {style.info_col}>
+                                    <div className = {style.info_title}> 票種種類: </div>
+                                    <div className = {style.info_text}> 台灣全家 FamiPort 取票</div>
+                                </div>
+                                <div className= {style.info_col}>
+                                    <div className = {style.info_title}> 付款方式: </div>
+                                    <div className = {style.info_text}> ATM 虛擬帳號、信用卡</div>
+                                </div>
+                                <div className={style.info_title}> 售票種類: </div>
+                            </div> 
+                        </div>
+   
+                        <div class={style.sort}>
+                            <div className= {style.sort_container}>
+                                <div className = {style.sort_col}>
+                                    <div className={style.st_box}>
+                                        <div className ={style.sort_text}>1F 搖滾區</div>
+                                    </div>
 
-                    <div className = "word">NUMBERS</div>
-                    <div className = "input_box"> 
-                        <div className = "number"> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-        <article className={style.description__layout}>
-                    <h1>DESCRIPTIONS</h1>
-                    <hr className="divider--light" />
-                    <p className={style.descriptionContent}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium laborum
-                        corrupti ut iure aliquam. Quod, perferendis. Libero tempore iste, animi sint numquam illum quasi laboriosam
-                        unde pariatur quidem! Suscipit consequatur nihil dolor impedit temporibus ad cum, voluptatum odit ratione
-                        ullam
-                        eligendi amet beatae aliquid eaque nesciunt optio nobis ducimus itaque. Voluptatibus aspernatur assumenda
-                        quod
-                        quo error consequuntur, vero iusto reprehenderit repellat maiores, sapiente dolores voluptates minima. Alias
-                        dolore assumenda fuga quae repellat voluptatum quo, saepe exercitationem perspiciatis reiciendis modi
-                        tempora.
-                        Recusandae explicabo iusto corporis nam numquam dignissimos, necessitatibus, iure non culpa repellat
-                        repudiandae temporibus! Saepe excepturi tempore iusto eos sit!</p>
-                
-            </article>
-    </div>
+                                    <Space className = {style.number}>
+   
+                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
     
+                                    </Space>
+                                
+                                    
+                                    
+                                    
+                                    <div className={style.sort_money}>$400</div>
+                                </div>  
+
+                                <div className = {style.sort_col}>
+                                    <div className={style.st_box}>
+                                        <div className ={style.sort_text}>1F 搖滾區+酒水暢飲</div>
+                                    </div>
+                                    
+                                
+                                    <Space className = {style.number}>
+   
+                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+    
+                                    </Space>
+
+                                    <div className={style.sort_money}>$500</div>
+                                </div>  
+
+                                <div className = {style.sort_col}>
+                                    <div className={style.st_box}>
+                                        <div className ={style.sort_text}>1F 後排站台</div>
+                                    </div>
+                                
+                                    <Space className = {style.number}>
+   
+                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+    
+                                    </Space>
+
+                                    <div className={style.sort_money}>$350</div>
+                                </div>  
+
+                                <div className = {style.sort_col}>
+                                    <div className={style.st_box}>
+                                        <div className ={style.sort_text}>1F 後排站台+酒水暢飲</div>
+                                    </div>
+                                
+                                    <Space className = {style.number}>
+   
+                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+    
+                                    </Space>
+
+                                    <div className={style.sort_money}>$450</div>
+                                   
+                                    
+                                </div>  
+                            </div>
+                            
+                             <button className={style.btn_buy} type="button" name="button">購買</button>    
+
+                            
+                           
+                        </div>
+           
+                    </div>
+                    </Col>
+                </Row>
+                
+                
+            </div>
+
+
+            <div className = {style.all_2}>
+
+
+            <Row gutter={[24, 24]}>
+                    <Col
+                        sm={{ span: 24 }}
+                        md={{ span: 24 }}
+                        lg={{ span: 12 }}
+                        xl={{ span: 12 }}
+                    >
+                        <article className={style.description__layout}>
+                            <div className = {style.de_title}> 
+                                <div className={style.de_title_text}>活動介紹</div>
+                            </div>
+  
+                        <div className={style.description_box}>
+                            <div className={style.description_text}>
+                            政大黑音第六屆謝幕專場【黯陰陽】預售票正式開賣
+                            接連產出數首佳作，在街聲排行榜上嶄露頭角的政大黑音第六屆，將帶來屬於他們最後的表演！
+                            從大家耳熟能詳的熱門歌曲，到你沒聽過的隱藏作品。
+                            從你不可能不認識、才華足以衝擊饒舌圈的新生代饒舌歌手，到平時隱藏在他們之下，但才華一點都不遜色的神秘玩家。
+                            這一次，政大黑音第六屆全員都將在這最後的舞台上集結！
+                            更是特邀兩組重量級前輩擔任嘉賓，無需猶豫，保證值回票價。  -
+                            至於為什麼要叫黯陰陽，7/10你們會明白的
+                            </div>
+                        </div>
+
+                         </article>
+                    </Col>
+                    <Col
+                        sm={{ span: 24 }}
+                        md={{ span: 24 }}
+                        lg={{ span: 12 }}
+                        xl={{ span: 12 }}
+                    >
+                        <div className = {style.de_title}>
+                            <div className={style.de_title_text}>場地位置</div>
+                         </div>
+                    </Col>
+
+                    
+            </Row>
+
+
+            
+            
+            </div>
+            
+        </div>
+
     );
 
 }
