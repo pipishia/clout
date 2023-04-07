@@ -1,16 +1,38 @@
 import style from './header.module.css'
-export default function header({ title, slogan})
+import 'antd/dist/reset.css'
+import { useState } from "react";
+import CartSummary from '../cartsummary/cart'
+import { Link } from "react-router-dom"
+import NavBar from '../navbar/navbar';
+
+export default function header({ title,slogan})
 {
+    const [isOnTouch, setIsOnTouch] = useState(false);
     return (
+        
         <header className={style.header}>
-            <div className="container d-flex flex-column align-items-center">
-                <img className={style.avatar} src="./images/avatar.png" alt="avatar" />
-                <h1 className={style.headerTitle}>最新消息{title}</h1>
-                <hr className={style.divider} />
-                <p className={style.slogan}>cart{slogan}</p>
-                <p className={style.slogan}>login{slogan}</p>
-            </div>
+            <img className={style.clout} src="./images/cloutlogo.png" alt="clout" />
+             <div class={style.navbar}>  
+    <a>  <h1 className={style.about}>about us{title}</h1></a>
+       <a>  <h1 className={style.new}>news{title}</h1></a>
+       <div class={style.wrap}>
+                   <div class={style.flwrap}>
+                           <div class={style.mainsearchinputitem}>
+                               <input type="text"  value="" placeholder="..."/>
+                               <button class={style.searchbutton}>Search</button>
+                           </div>
+                       </div>
+                   </div>
+                   <div class={style.user}>
+                    <button class={style.signbutton}>Sign Up</button>
+                    <button class={style.loginbutton}>Login</button>
+                    </div>
+               <CartSummary/>  
+               <NavBar />        
+   </div>
         </header>
     );
+
+    
 }
 

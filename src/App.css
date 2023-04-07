@@ -1,5 +1,8 @@
 body {
   font-family:"Segoe UI", "Roboto", sans-serif;
+  
+    background-color:#b3c9db ;
+
 }
 
 h1 {
@@ -21,10 +24,6 @@ p {
   font-size: 1.2rem;
 }
 
-.text-center {
-  margin: 2% auto;
-  text-align: center;
-}
 
 
 
