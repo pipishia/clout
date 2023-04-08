@@ -18,8 +18,8 @@ export default function header({ title,slogan})
        <div class={style.wrap}>
                    <div class={style.flwrap}>
                            <div class={style.mainsearchinputitem}>
-                               <input type="text"  value="" placeholder="..."/>
-                               <button class={style.searchbutton}>Search</button>
+                               <input type="text" />
+                               <button class={style.searchbutton}><img src="./images/search.png" width="20vw" ></img></button>
                            </div>
                        </div>
                    </div>
@@ -28,8 +28,9 @@ export default function header({ title,slogan})
                     <button class={style.loginbutton}>Login</button>
                     </div>
                <CartSummary/>  
-               <NavBar />        
+                    
    </div>
+   <div class={style.rwdshit}><NavBar />  </div>
         </header>
     );
 
