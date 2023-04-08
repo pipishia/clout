@@ -1,0 +1,14 @@
+.images {
+    position: relative;
+    }
+    .images:hover::before {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    content: '你看到我啦(・ω・)ノ';
+    text-shadow: 1px 1px 20px black;
+    z-index: 1;
+    transition: .5s;
+    color: #fff;
+    }
+ 

@@ -1,6 +1,6 @@
 import React from "react"
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import styles from './masonry.css'
+import  './masonry.css'
 const images = [
     "./images/01.jpg",
     "./images/02.jpg",
@@ -19,18 +19,17 @@ const images = [
     "./images/15.jpg",
     "./images/16.jpg",
     "./images/17.jpg",
-
 ]
 const masonry = () =>{
     return(
 
         <>
        <div style={{backgroundColor: '#B3C9DB',padding:'20px'}} >
+
         <ResponsiveMasonry
                     columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
-                    
                 >
-                    <Masonry  gutter="20px">
+                    <div  class="images"> <Masonry gutter="20px">
                         {images.map((image, i) => (
                             <img
                                 key={i}
@@ -40,6 +39,8 @@ const masonry = () =>{
                             />
                         ))}
                     </Masonry>
+                    </div>
+                   
                 </ResponsiveMasonry>
        </div>
 
