@@ -35,11 +35,11 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgba(108, 174, 236, 0.511);
+    /* background-color: rgba(108, 174, 236, 0.511); */
     
   }
   .big_info{
-    background-color:  rgba(252, 254, 255, 0.807);
+    background-color: white;;
     padding-top: 1%;
     
     margin-top: 5%;
@@ -52,7 +52,7 @@
   .all{
     align-items: center;
     justify-content: center;
-    background-color:  rgba(252, 254, 255, 0.807);
+    
     
   }
   .info_wrapper{
@@ -154,7 +154,7 @@
     height: 45px;
     margin-left: 20%;
     border-radius: 5px;
-    background-color: #411cbb8d;
+    background-color:#0099ffc0;
     align-items: center;
     justify-content: center;
 
@@ -177,8 +177,8 @@
 }
 
 .description__layout{
-  background-color: rgba(252, 254, 255, 0.807);
-  
+  /* background-color: rgba(252, 254, 255, 0.807); */
+  margin-top:3px;
 }
 .description_box{
   
@@ -188,7 +188,7 @@
   
 }
 .activity{
-  background-color:  rgba(252, 254, 255, 0.807);
+  background-color:  white;
   width: 580px;
   margin-left: 13%;
   padding-top: 1.5%;
@@ -210,7 +210,7 @@
 .superstar{
   width: 700px;
   height:308px;
-  background-color:  rgba(252, 254, 255, 0.807);
+  background-color:  white;
   
   padding-top: 1.5%;
   border-radius: 2%;
@@ -229,7 +229,7 @@
     height: 45px;
     margin-left: 26%;
     border-radius: 5px;
-    background-color: #411cbb8d;
+    background-color: #0099ffc0;
     align-items: center;
     justify-content: center;
     margin-bottom: 3.5%;
@@ -271,7 +271,7 @@
 }
   @media screen and (max-width: 768px) {
     .pic_style {
-   margin-left:0%;
+   margin-left:15%;
    }
    
    .info_container{
@@ -284,8 +284,14 @@
    }
    .btn_buy{
 
-    margin-left: 45%;
+    margin-left: 40%;
    } 
+   .description__layout{
+    margin-top: 100px;
+   }
+   .activity{
+    
+   }
   }
  @media screen and (min-width: 768px) {
   .body{
