@@ -5,7 +5,7 @@ import CartSummary from '../cartsummary/cart'
 import { Link } from "react-router-dom"
 import NavBar from '../navbar/navbar';
 
-export default function header({ title,slogan})
+export default function header({ title})
 {
     const [isOnTouch, setIsOnTouch] = useState(false);
     return (
@@ -19,7 +19,7 @@ export default function header({ title,slogan})
                    <div class={style.flwrap}>
                            <div class={style.mainsearchinputitem}>
                                <input type="text" />
-                               <button class={style.searchbutton}><img src="./images/search.png" width="20vw" ></img></button>
+                               <button class={style.searchbutton}><img src="./images/search.png" width="18vw" ></img></button>
                            </div>
                        </div>
                    </div>
@@ -30,7 +30,7 @@ export default function header({ title,slogan})
                <CartSummary/>  
                     
    </div>
-   <div class={style.rwdshit}><NavBar />  </div>
+   <div class={style.rwdshit}><NavBar /></div>
         </header>
     );
 
