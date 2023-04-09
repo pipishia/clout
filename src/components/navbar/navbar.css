@@ -1,0 +1,176 @@
+.nav{
+  position: fixed;
+  z-index: 2;
+  
+}
+.navbar{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  
+}
+
+.menu-toggle{
+  cursor: pointer;
+  
+}
+.nav-overlay{
+  position: fixed;
+  background: #ffffff;
+  z-index: -2;
+  top:-100%;
+  left:0;
+  width: 40%;
+  height: 100vh;
+  overflow: hidden;
+  padding: 4em;
+  transition: all 0.5s ;
+ 
+}
+
+.hambox{
+  position: relative;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  padding: 2.4em;
+  
+}
+.hambox:hover{
+  background: #2a2a2f;
+}
+.hamboxOpen{
+  background: #2a2a2f;
+}
+.linetop,.linebottom{
+margin:0 auto;
+position: absolute;
+display: block;
+width: 24px;
+height:2px;
+border-radius: 10px;
+background: rgba(255, 255, 255, 0.5);
+left: 0;
+right: 0;
+transform: rotate(0deg);
+transition: all 0.4s;
+}
+.linetop{
+  top: 2.2em;
+}
+.linebottom{
+  bottom: 2.2em;
+}
+.linetop.spin{
+  top: 2.35em;
+  transform: rotate(135deg);
+  background: #fff;
+}
+.linebottom.spin{
+  bottom: 2.35em;
+  transform: rotate(225deg);
+  background: #fff;
+}
+
+ul.nav-links{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ul.nav-links li{
+list-style: none;
+position: relative;
+}
+ul.nav-links li a{
+ text-decoration: none;
+ color: #000;
+ font-size: 2em;
+ position: relative;
+ top:0;
+ white-space:nowrap;
+  }
+
+
+
+/*searchbar*/
+
+.wrap {
+    border-radius: 1px;
+    box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 30px;
+    margin-top:60px;
+    display: flex;
+    min-width: 25vw;
+    max-width: 10vw;
+}
+
+.flwrap {
+    float: left;
+    width: 100%;
+    position: relative;
+   
+}
+
+.wrap:before {
+    position: absolute;
+    bottom: -40px;
+    width: 50px;
+    height: 1px;
+    background: rgba(255,255,255,0.41);
+    left: 50%;
+    /* margin-left: -25px; */
+}
+
+.mainsearchinput-item {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    border: #000;
+    height: 50px;
+    position: relative;
+}
+
+
+.mainsearchinputitem input {
+    float: left;
+    border: none;
+    width: 76%;
+    height: 25px;
+    padding-left: 20px;
+    border-radius: 4px;
+}
+
+.searchbutton{
+      background: #949392;
+      height: 30px;
+      border-color:#949392;
+      width: 24%;
+      font-size: 20%;
+      border-radius: 3px;
+      min-width: 20px;
+}
+
+.mainsearchinputwrap {
+    max-width: 500px;
+    margin: 8px auto;
+    position: relative;
+}
+
+:focus {
+    outline: 0;
+}

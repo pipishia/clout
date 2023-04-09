@@ -1,5 +1,8 @@
 body {
   font-family:"Segoe UI", "Roboto", sans-serif;
+  width:100%;
+  background-color:#b3c9db ;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -9,11 +12,7 @@ h1 {
   font-weight: 500;
   line-height: 1.2;
 }
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-}
+
 
 p {
   margin-top: 0;
@@ -21,10 +20,6 @@ p {
   font-size: 1.2rem;
 }
 
-.text-center {
-  margin: 2% auto;
-  text-align: center;
-}
 
 
 
@@ -52,34 +47,4 @@ p {
   margin: auto;
   padding-left: 10px;
   padding-right:10px;
-}
-
-@media (min-width: 576px){
-  .container {
-    width: 540px;
-  }
-}
-
-@media (min-width: 768px){
-  .container {
-    width: 720px;
-  }
-}
-
-@media (min-width: 992px){
-  .container {
-    width: 960px;
-  }
-}
-
-@media (min-width: 1200px){
-  .container {
-    width: 1140px;
-  }
-}
-
-@media (min-width: 1600px){
-  .container {
-    width: 1500px;
-  }
 }

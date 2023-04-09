@@ -1,0 +1,41 @@
+.images{
+    position: relative;
+    z-index:0;
+  }
+  .images:hover{
+    cursor:pointer;
+    filter: brightness(30%);
+  }
+  .images:hover+.inside{
+    opacity: 100%;
+  }
+  .inside:hover{
+    opacity: 100%;
+  }
+
+  .text{
+    color: #fff;
+    font-size: 2vw;
+  }
+
+.inside{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    z-index:1;
+    position: relative;
+    top:-5%;
+    margin-bottom: -20px;
+   opacity: 0%;
+}
+.btn{
+    color: #000;
+    font-size: 2vw;
+    background:#fff;
+    width: 30%;
+   margin-left: 35%;
+   border:#000;
+   border-radius: 5px;
+   margin-bottom: -100px;
+   white-space:nowrap;
+  }

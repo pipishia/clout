@@ -1,0 +1,14 @@
+.cartSummary {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1vw;
+    margin-right: 3vw;
+    margin-top: 5px;
+  }
+  
+  .cartText {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: -4px;
+  }
+ 
