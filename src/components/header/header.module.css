@@ -17,7 +17,7 @@
 }
 .navbar {
   display: flex;
-  margin-left: 60vw;
+  margin-left: 59vw;
   margin-top: 20px;
   width: 40vw;
   height: 10vh;
@@ -30,8 +30,8 @@
   color: #fff;
   width: 3vw;
   height: 2vh;
-  margin-right: 2rem;
-  font-size: 1.2rem;
+  margin-right: 1.5rem;
+  font-size: 1rem;
   margin-top: 10px;
  
 }
@@ -41,8 +41,8 @@
   color: #fff;
   width: 5vw;
   height: 2vh;
-  margin-right: 2vw;
-  font-size: 1.2rem;
+  margin-right: 1.5vw;
+  font-size: 1rem;
   margin-top: 10px;
   white-space:nowrap;
 }
@@ -50,7 +50,7 @@
 .user {
   width: 6vh;
   height: 6vh;
-  margin-left: 2vw;
+  margin-left: 3vw;
 }
 
 
@@ -66,12 +66,13 @@
   background: none;
   height: 30px;
   border:none;
-  width: 6rem;
+  width: 4rem;
   font-size: 1vw;
   color: #ff9100;
   border-radius: 5px;
   white-space:nowrap;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin-right: 1vw;
 }
 .loginbutton{
   background: none;
@@ -81,8 +82,8 @@
   font-size: 1vw;
   color: #ff9100;
   border-radius: 5px;
-  font-size: 1.2rem;
-  margin-right: 2vw;
+  font-size: 1rem;
+  margin-right: 1vw;
 }
 .top {
   text-align: center;
@@ -182,7 +183,7 @@
       width: 24%;
       font-size: 20%;
       border-radius: 3px;
-      min-width: 30px;
+      min-width: 20px;
 }
 
 .mainsearchinputwrap {
@@ -196,14 +197,18 @@
 }
 
 
-@media (max-width: 1540px) {
+@media (max-width: 1200px) {
   .navbar {
      display: none;
+  }
+  .clout{
+    width: 12rem;
+    height: 6rem;
   }
 }
 
 
-@media (min-width: 1540px) {
+@media (min-width: 1200px) {
   .rwdshit {
      display: none;
   }

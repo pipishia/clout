@@ -1,8 +1,11 @@
 
+import 'antd/dist/reset.css';
+import {ConfigProvider} from'antd';
+import Home from './pages/home';
+import './App.css';
 import 'antd/dist/reset.css'
-import './App.css'
-import Home from './pages/home'
-import Navbar from '../src/components/navbar/navbar'
+
+// import Activity from './pages/Activity'
 function App() {
   return (
     <Home />

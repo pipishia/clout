@@ -1,6 +1,11 @@
 import style from './Content.module.css'
 import { Row, Col } from "antd";
 import { InputNumber, Space } from 'antd';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 
 
@@ -9,6 +14,46 @@ export default function Content() {
     const onChange = (value) => {
         console.log('changed', value);
       };
+    
+     
+      var settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    }
+    
+    
+    
+        
    
     return (
 
@@ -144,14 +189,14 @@ export default function Content() {
             <div className = {style.all_2}>
 
 
-            <Row gutter={[24, 24]}>
+            <Row gutter={[24, 24]} className={style.description__layout}>
                     <Col
                         sm={{ span: 24 }}
                         md={{ span: 24 }}
                         lg={{ span: 12 }}
                         xl={{ span: 12 }}
                     >
-                        <article className={style.description__layout}>
+                        <article className= {style.activity} >
                             <div className = {style.de_title}> 
                                 <div className={style.de_title_text}>活動介紹</div>
                             </div>
@@ -176,9 +221,41 @@ export default function Content() {
                         lg={{ span: 12 }}
                         xl={{ span: 12 }}
                     >
-                        <div className = {style.de_title}>
-                            <div className={style.de_title_text}>場地位置</div>
-                         </div>
+                        <div className = {style.superstar}>
+                            <div className = {style.ar_title}>
+                                <div className={style.ar_title_text}>演出藝人</div>
+                            </div>
+                           
+                           
+                             
+                                
+                                <Slider {...settings}>
+                                    <div className = {style.artist}>
+                                        <img src="images\jadan.jpg" alt="" className={style.art_pic} />
+                                    </div>
+                                    <div className = {style.artist}>
+                                        <img src="images\gunna2.png" alt="" className={style.art_pic} />
+                                    </div>
+                                    <div className = {style.artist}>
+                                        <img src="images\thug2.png" alt="" className={style.art_pic} /> 
+                                    </div>
+                                    <div className = {style.artist}>
+                                        <img src="images\billie.jpg" alt="" className={style.art_pic} />   
+                                    </div>
+                                    <div className = {style.artist}>
+                                        <img src="images\uzi.jpg" alt="" className={style.art_pic} />
+                                    </div>
+                                    <div className = {style.artist}>
+                                        <img src="images\will2.png" alt="" className={style.art_pic} />
+                                    </div>
+                                </Slider>
+
+
+                           
+                        </div>
+                       
+
+
                     </Col>
 
                     
