@@ -6,10 +6,12 @@ function Home() {
     return (
         <div>
             <Header />
-            <Images />
+            
             <Text />
             <Footer />
+            {/* <Animation/> */}
         </div>
     );
 }
+
 export default Home

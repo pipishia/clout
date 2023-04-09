@@ -1,6 +1,5 @@
 {
   "license": "MIT",
-
   "name": "clout",
   "private": true,
   "version": "0.0.0",
@@ -11,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@inlet/react-pixi": "^6.8.0",
+    "@pixi/react": "^7.0.3",
     "antd": "^5.3.2",
+    "pixi.js": "^7.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
