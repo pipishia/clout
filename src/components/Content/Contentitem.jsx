@@ -12,4 +12,4 @@
 
 // };
 
-// export default Contentitema
+// export default Contentitem
