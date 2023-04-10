@@ -8,7 +8,6 @@ function Home() {
        <Masonry/>
         <Footer />
        </div>
-
     );
 }
 
