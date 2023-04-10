@@ -40,11 +40,7 @@ function App() {
       </Route>
     </Routes>
   </BrowserRouter>  
-<<<<<<< HEAD
    </Provider>
-=======
-
->>>>>>> ecce8f708c3ef275bcd51449149f2cd83faf429d
   );
 }
 
