@@ -43,7 +43,7 @@
     padding-top: 1%;
     
     margin-top: 5%;
-    width: 700px;
+    width: 92%;
     height: 520px;
     border-radius: 2%;
     margin-bottom: 50px;
@@ -189,12 +189,12 @@
 }
 .activity{
   background-color:  white;
-  width: 580px;
+  width: 78%;
   margin-left: 13%;
   padding-top: 1.5%;
   border-radius: 2%;
   padding: 3%;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   
 }
 
@@ -216,6 +216,9 @@
   border-radius: 2%;
   padding: 3%;
   margin-bottom: 70px;
+}
+.slick-arrow{
+  color: rgb(58, 50, 40) !important;
 }
 .artist{
   background-color: white;
@@ -271,8 +274,17 @@
 }
   @media screen and (max-width: 768px) {
     .pic_style {
-   margin-left:15%;
+   justify-content: center;
+   display: flex;
+   align-items: center;
    }
+   .big_info{
+    justify-content: center;
+   display: flex;
+   align-items: center;
+
+   }
+
    
    .info_container{
     margin-left: 5%;
@@ -290,12 +302,20 @@
     margin-top: 100px;
    }
    .activity{
+    background-color:  white;
+    width: 100%;
+    margin-left: 13%;
+    padding-top: 1.5%;
+    border-radius: 2%;
+    padding: 3%;
+    margin-bottom: 50px;
     
-   }
   }
- @media screen and (min-width: 768px) {
+  
+  }
+ /* @media screen and (min-width: 768px) {
   .body{
     flex-direction: column;
   }
   
- }
+ } */

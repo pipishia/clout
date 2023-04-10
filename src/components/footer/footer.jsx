@@ -5,19 +5,20 @@ export default function Footer() {
     <footer className={style.footerCustom}>
       <div className={style.footerAbove}>
         <div className="container">
-          <Row gutter={[16, 16]}>
+          <Row gutter={[24, 24]}>
             <Col
               xs={{ span: 24 }}
               sm={{ span: 24 }}
-              lg={{ span: 20 }}
+              lg={{ span: 12 }}
+              xl={{ span: 12 }}
             >
               <h5 className={style.footerDescription}>
                 客戶服務
               </h5>
               <ul className={style.footerlist1}>
-                <li className={style.footerItem}><a href="" className={style.footerabout}>票務服務單位：拓元股份有限公司／統一編號54651107</a></li>
-                <li className={style.footerItem}><a href="" className={style.footerabout}>客服專線：+886 (02) 8772-9835</a></li>
-                <li className={style.footerItem}><a href="" className={style.footerabout}>客服信箱：聯繫我們</a></li>
+                <li className={style.footerItem}><a href="" className={style.footerabout}>客服單位：CLOUT／統一編號54377888</a></li>
+                <li className={style.footerItem}><a href="" className={style.footerabout}>客服專線：+886 (02) 8777-4532</a></li>
+                <li className={style.footerItem}><a href="" className={style.footerabout}>客服信箱：clout@gmail.com</a></li>
                 <li className={style.footerItem}><a href="" className={style.footerabout}>客服時間：週一 ~ 週五 10:00-12:30 | 13:30-18:00</a></li>
               </ul>
 
@@ -26,15 +27,16 @@ export default function Footer() {
             <Col
               xs={{ span: 24 }}
               sm={{ span: 24 }}
-              lg={{ span: 4 }}
+              lg={{ span: 12 }}
+              xl={{ span: 12 }}
             >
                 <h5 className={style.footerDescription}>
                 相關連結
               </h5>
               <ul className={style.footerlist2}>
-                <li className={style.footerItem}><a href="" className={style.footerlink}><i className="fab fa-facebook-f"></i></a></li>
-                <li className={style.footerItem}><a href="" className={style.footerlink}><i className="fab fa-google-plus-g"></i></a></li>
-                <li className={style.footerItem}><a href="" className={style.footerlink}><i className="fab fa-linkedin-in"></i></a></li>
+                <li className={style.footerItem}><img src = "/images/facebook-48.png" a href="" className={style.footerlink1}/><i className="fab fa-facebook-f"></i></li>
+                <li className={style.footerItem}><img src = "images/instagram-48.png" a href="" className={style.footerlink2}/><i className="fab fa-google-plus-g"></i></li>
+                <li className={style.footerItem}><img src = "/images/YOUTUBE.png" a href="" className={style.footerlink3}/><i className="fab fa-linkedin-in"></i></li>
               </ul>
             </Col>
           </Row>

@@ -3,7 +3,7 @@ import Footer from "../components/footer/footer"
 import Masonry from "../components/masonry/masonry"
 function Home() {
     return (
-        <div>
+            <div>
          <Header />
        <Masonry/>
         <Footer />

@@ -11,7 +11,7 @@ export default function header({ title})
     return (
         
         <header className={style.header}>
-            <img className={style.clout} src="./images/cloutlogo.png" alt="clout" />
+            <img className={style.clout} src={'./images/cloutlogo.png'} alt="clout" />
              <div class={style.navbar}>  
     <a>  <h1 className={style.about}>about us{title}</h1></a>
        <a>  <h1 className={style.new}>news{title}</h1></a>

@@ -1,7 +1,7 @@
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import product from '../json/product.json'
 import  './masonry.css'
-
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import Activity from "../../pages/Activity";
 export default function Productitems({product}){
     return (
         <>
@@ -22,7 +22,9 @@ export default function Productitems({product}){
                                             {product.name}
                                         </div>
                                         <button className="btn">
-                                            {product.button}
+                                        < Link to={`/Activity/id/${Activity.id}`} className="link">
+                                        {product.button}
+                                        </Link>
                                         </button>
                                     </div>
                                     </>
