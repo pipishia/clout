@@ -15,9 +15,9 @@ export default function header({ title})
             <img className={style.clout} src="./images/cloutlogo.png" alt="clout" />
              <div class={style.navbar}>  
     <a>  <h1 className={style.about}>about us{title}</h1></a>
-    < Link to='/' className="homelink">
-            <a>  <h1 className={style.home}>home{title}</h1></a>
-        </Link>
+                        < Link to='/' className="link">
+                        <a>  <h1 className={style.home}>home{title}</h1></a>
+                        </Link>
       
        <div class={style.wrap}>
                    <div class={style.flwrap}>
@@ -35,8 +35,8 @@ export default function header({ title})
                     </div>
                <CartSummary/>  
                     
-            </div>
-                <div class={style.rwdshit}><NavBar /></div>
+   </div>
+   <div class={style.rwdshit}><NavBar /></div>
         </header>
     );
 
