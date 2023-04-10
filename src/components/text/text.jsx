@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import  "./text.css";
 
  function text()
@@ -78,7 +77,6 @@ import  "./text.css";
     return(
         <div className="loginpage">
         <div className="screen" >
-            <img src ="public\images\sky.jpg" className="imgstyle"/>
       <div className="login-form">
         <div className="title">LOGIN</div>
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
