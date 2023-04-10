@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 // Part1: Define Slice (including reducers and actions)
-const initialState = { cartItems: [] };
+const cartItems = [];
+const initialState = { cartItems };
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
@@ -18,6 +19,9 @@ const cartSlice = createSlice({
         state.cartItems = [...state.cartItems, item];
       }
     },
+    removeCartItems: (state, action) => {
+      state.cartItems = state.cartItems.filter((x) => x.id !== action.payload);
+    },
   },
 });
 
@@ -25,7 +29,7 @@ const cartSlice = createSlice({
 export const selectCartItems = (state) => state.cart.cartItems;
 
 // export actions to global
-export const { addCartItems } = cartSlice.actions;
+export const { addCartItems, removeCartItems } = cartSlice.actions;
 
 // export reducer to global
 export default cartSlice.reducer;

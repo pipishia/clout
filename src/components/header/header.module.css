@@ -6,6 +6,13 @@
   background: url(../images/sky.gif)no-repeat;
   background-size: cover;
 }
+.header2 {
+  background-color: #0b7596;
+  height: 25vh;
+  color: #fff;
+  display: flex;
+  background-size: cover;
+}
 
 .clout {
   width: 16rem;

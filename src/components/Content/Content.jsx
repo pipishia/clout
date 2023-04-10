@@ -1,15 +1,17 @@
 import style from './Content.module.css'
-import { Row, Col } from "antd";
+import { Select } from "antd";
 import { InputNumber, Space } from 'antd';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import product from "../json/product.json"
 import { priceArray } from "../cartsummary/prices";
-// import AddToBasket from "../addtobasket"
-
+import AddToBasket from "../addtobasket"
+import product from '../json/product.json'
+const { Option } = Select;
 
 export default function Content() {
+
+ 
     const onChange = (value) => {
         console.log('changed', value);
       };
@@ -47,11 +49,8 @@ export default function Content() {
           }
         ]
     }
-    
-    
-    
-        
-   
+
+    // const [qty, setQty] = useState(product.countInStock > 0 ? 1 : 0);
     return (
 
         <div className={style.container}>
@@ -95,35 +94,27 @@ export default function Content() {
                                 <div className = {style.sort_col}>
                                     <div className={style.st_box}>
                                         <div className ={style.sort_text}>
-                                            {priceArray.map((price, id)=>(
-                                                <h2 key={id}>{price.name}</h2>
+                                            {product.map((product, id)=>(
+                                                <h2 key={id}>{product.name}</h2>
                                             ))}
                                         </div>
                                     </div>
                                     <div className={style.counter}>
-                                         <Space className = {style.number}>
-                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
-                                    </Space>
-                                    <Space className = {style.number}>
-                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
-                                    </Space>
-                                    <Space className = {style.number}>
-                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
-                                    </Space>
-                                    <Space className = {style.number}>
-                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
-                                    </Space>
+                                    <AddToBasket product={product}   />
+                                    <AddToBasket product={product}  />
+                                    <AddToBasket  product={product} />
+                                    <AddToBasket product={product}  />
                                     </div>
                                    
                                     <div className={style.sort_money}>
-                                          {priceArray.map((price, id)=>(
-                                                <h2 key={id}>{price.price}</h2>
+                                          {product.map((product, id)=>(
+                                                <h2 key={id}>{product.price}</h2>
                                             ))}
                                     </div>
                                 </div>  
 
                             
-                             <button className={style.btn_buy} type="button" name="button">購買</button>    
+                          
 
                             </div>
                            
@@ -183,11 +174,9 @@ export default function Content() {
                                     <div className = {style.artist}>
                                         <img src="images\will2.png" alt="" className={style.art_pic} />
                                     </div>
-                                </Slider>
-
-
-                           
+                                </Slider>  
                         </div>
+
             </div>
             
         </div>

@@ -2,7 +2,7 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import  './masonry.css'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import Activity from "../../pages/Activity";
-export default function Productitems({product}){
+export default function Productitems({prod}){
     return (
         <>
         <div style={{backgroundColor: '#B3C9DB',padding:'20px'}} >
@@ -11,19 +11,19 @@ export default function Productitems({product}){
                  >
                      <div  class="all"> 
                         <Masonry gutter="20px">
-                            {product.map((product) => (
+                            {prod.map((prod) => (
                             <>
                             <img className="images"
-                                    key={product.i}
-                                    src={product.images}
-                                    alt={product.name} />
+                                    key={prod.i}
+                                    src={prod.images}
+                                    alt={prod.name} />
                                     <div className="inside">
                                         <div className="text">
-                                            {product.name}
+                                            {prod.name}
                                         </div>
                                         <button className="btn">
                                         < Link to='/Activity' className="link">
-                                        {product.button}
+                                        {prod.button}
                                         </Link>
                                         </button>
                                     </div>
