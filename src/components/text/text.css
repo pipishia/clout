@@ -39,13 +39,16 @@ button[type="submit"]:hover {
   padding-left: 83vh;
   padding-top:30vh;
   position:static;
+  background: url(../images/dogsky.gif)no-repeat;
+  background-size: cover;
 }
-.imgstyle{
-  width:100%;
-  height: 100vh;
+
+.doggy{
+  width: 1080px;;
+  height: 600px;
   position:absolute;
   z-index:0;
-  top:93.4vh;
+  top:25vh;
   left:0vh;
 }
 
