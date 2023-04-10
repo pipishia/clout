@@ -6,17 +6,23 @@
   background-color: #2d659278;
   color: white;
   margin: 0;
-  height:200px
+  height:30vh;
+  display:flex;
+}
+
+.container{
+  display: flex;
+}
+.client{
+   justify-content: left;
+   margin-left: 1vw;
 }
 
 .footerDescription {
   font-size: 1.3rem;
-  margin-left: 8%;
-  padding: 0 30px;
-  line-height: 40px;
-  text-align: center;
-  align-self: center;
-  font-weight: 650;
+  margin-left: 4vw;
+  line-height: 5vw;
+  
 }
 
 .footerlist {
@@ -24,12 +30,6 @@
   padding-left: 0 !important; 
   display: flex;
   justify-content: center;
-}
-.footerlist2 {
- 
-  
-  display: flex;
-  
 }
 
 .footerItem {
@@ -43,11 +43,19 @@
     line-height: 1.5rem;
     font-weight:700;
     color: white;
-   
-
-
 
 }
+
+.connect{
+  margin-left: 45vw;
+   
+}
+
+.footerlist2 {
+  display: flex;
+  margin-left: 2vw;
+}
+
 .footerlink1 {
   color: white;
   text-decoration: none;
@@ -68,8 +76,9 @@
   border: 3px solid #fff;
   border-radius: 60%;
   text-align: center;
-  font-size: 20px;
-  line-height: 45px;
+  font-size: 20vw;
+  line-height: 45vw;
+  margin: 0 2vw 0 2vw;
 }
 .footerlink3{
   color: white;
@@ -80,34 +89,13 @@
   border: 3px solid #fff;
   border-radius: 60%;
   text-align: center;
-  font-size: 20px;
-  line-height: 45px;
+  font-size: 20vw;
+  line-height: 45vw;
 }
 
 .footerlink:hover {
   background-color: #fff;
   color: #2c3e50;
-}
-
-@media screen and (min-width: 768px) {
-  .footerDescription {
-    padding: 0px;
-    text-align: justify;
-  }
-  .footerAbove {
-    
-  }
-}
-
-@media screen and (min-width: 992px) {
-
-  .footerlist1 {
-    justify-content: flex-end;
-  }
-  .footerItem {
-    margin-right: 0;
-    margin-left: 20px;
-  }
 }
 
 .footerBelow {
@@ -117,3 +105,35 @@
   font-size: 1.5rem;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .footerAbove{
+    justify-content: center;
+    text-align:center;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .footerDescription {
+    padding: 0px;
+    text-align: center;
+  }
+  .connect{
+    margin-left: 0vw;
+    justify-content: center;
+    text-align:center;
+    align-items: center;
+  }
+  .footerlist2 {
+    justify-content: center;
+    text-align:center;
+    align-items: center;
+    margin-left: 0vw;
+    padding-left: 3vw;
+  }
+  .footerBelow{
+    justify-content: center;
+  }
+}
+
+
