@@ -59,26 +59,12 @@ export default function Content() {
 
         <div className={style.container}>
             <div className={style.all}>
-
-                <Row gutter={[24, 24]}>
-                    <Col
-                        sm={{ span: 24 }}
-                        md={{ span: 24 }}
-                        lg={{ span: 12 }}
-                        xl={{ span: 12 }}
-                    >
+        
+              
                         <div className={style.pic}>
-                            <a href="" className={style.imagelink}>
-                                <img src="images\RapEvent.jpg" alt="" className={style.pic_style} />
-                            </a>
+                            <img src="images\RapEvent.jpg" alt="" className={style.pic_style} />
                         </div>
-                    </Col>
-                    <Col
-                        sm={{ span: 24 }}
-                        md={{ span: 24 }}
-                        lg={{ span: 12 }}
-                        xl={{ span: 12 }}
-                    >
+                
                     <div className = {style.big_info}>
                         <div class = {style.info_container}>
                             <div className={style.title}>HollyFish </div>
@@ -179,23 +165,13 @@ export default function Content() {
                         </div>
            
                     </div>
-                    </Col>
-                </Row>
-                
-                
+                 
             </div>
 
 
             <div className = {style.all_2}>
 
 
-            <Row gutter={[24, 24]} className={style.description__layout}>
-                    <Col
-                        sm={{ span: 24 }}
-                        md={{ span: 24 }}
-                        lg={{ span: 12 }}
-                        xl={{ span: 12 }}
-                    >
                         <article className= {style.activity} >
                             <div className = {style.de_title}> 
                                 <div className={style.de_title_text}>活動介紹</div>
@@ -214,13 +190,7 @@ export default function Content() {
                         </div>
 
                          </article>
-                    </Col>
-                    <Col
-                        sm={{ span: 24 }}
-                        md={{ span: 24 }}
-                        lg={{ span: 12 }}
-                        xl={{ span: 12 }}
-                    >
+              
                         <div className = {style.superstar}>
                             <div className = {style.ar_title}>
                                 <div className={style.ar_title_text}>演出藝人</div>
@@ -253,17 +223,6 @@ export default function Content() {
 
                            
                         </div>
-                       
-
-
-                    </Col>
-
-                    
-            </Row>
-
-
-            
-            
             </div>
             
         </div>

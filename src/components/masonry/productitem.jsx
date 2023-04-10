@@ -22,7 +22,7 @@ export default function Productitems({product}){
                                             {product.name}
                                         </div>
                                         <button className="btn">
-                                        < Link to={`/Activity/id/${Activity.id}`} className="link">
+                                        < Link to='/Activity' className="link">
                                         {product.button}
                                         </Link>
                                         </button>

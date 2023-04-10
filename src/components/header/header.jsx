@@ -11,10 +11,14 @@ export default function header({ title})
     return (
         
         <header className={style.header}>
-            <img className={style.clout} src={'./images/cloutlogo.png'} alt="clout" />
+            
+            <img className={style.clout} src="./images/cloutlogo.png" alt="clout" />
              <div class={style.navbar}>  
     <a>  <h1 className={style.about}>about us{title}</h1></a>
-       <a>  <h1 className={style.new}>news{title}</h1></a>
+    < Link to='/' className="homelink">
+            <a>  <h1 className={style.home}>home{title}</h1></a>
+        </Link>
+      
        <div class={style.wrap}>
                    <div class={style.flwrap}>
                            <div class={style.mainsearchinputitem}>
@@ -24,8 +28,10 @@ export default function header({ title})
                        </div>
                    </div>
                    <div class={style.user}>
-                    <button class={style.signbutton}>Sign Up</button>
-                    <button class={style.loginbutton}>Login</button>
+                        <button class={style.signbutton}>Sign Up</button>
+                        < Link to='/login' className="link">
+                        <button class={style.loginbutton}> Login</button>
+                        </Link>
                     </div>
                <CartSummary/>  
                     
