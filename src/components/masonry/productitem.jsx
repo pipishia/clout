@@ -1,5 +1,4 @@
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import product from '../json/product.json'
 import  './masonry.css'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import Activity from "../../pages/Activity";

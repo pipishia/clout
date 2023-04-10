@@ -30,12 +30,15 @@
 }
 .btn{
     color: #000;
-    font-size: 2vw;
+    font-size: 1.2vw;
     background:#fff;
-    width: 30%;
-   margin-left: 35%;
+    width: 20%;
+   margin-left: 40%;
    border:#000;
    border-radius: 5px;
    margin-bottom: -100px;
    white-space:nowrap;
   }
+.link{
+  margin-left:-20%;
+}
