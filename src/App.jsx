@@ -5,6 +5,7 @@ import Home from './pages/home';
 import './App.css';
 import 'antd/dist/reset.css'
 import Activity from './pages/Activity'
+import Login from './pages/login'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="activity">
-        <Route path="id/:productId" element={<Activity />} />
+        <Route path="/activity" element={<Activity />} />
+      </Route>
+      <Route path="login">
+        <Route path="/login" element={<Login />} />
       </Route>
     </Routes>
   </BrowserRouter>  

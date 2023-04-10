@@ -24,7 +24,7 @@
   position: absolute;
   
 }
-.new {
+.home {
   text-transform: uppercase;
   display: flex;
   color: #fff;
@@ -83,7 +83,6 @@
   color: #ff9100;
   border-radius: 5px;
   font-size: 1rem;
-  margin-right: 1vw;
 }
 .top {
   text-align: center;
@@ -120,8 +119,6 @@
   border-color: #6366f2;
   opacity: 1;
 }
-
-
 
 
 
@@ -164,6 +161,7 @@
     border-right: 1px solid #eee;
     height: 50px;
     position: relative;
+    background-color: #fff;
 }
 
 
