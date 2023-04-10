@@ -17,7 +17,7 @@ export default function Footer() {
               </ul>
           </div>
           <div className={style.connect}>
-                <h5 className={style.footerDescription}>
+                <h5 className={style.footerDescription2}>
                 相關連結
               </h5>
               <ul className={style.footerlist2}>

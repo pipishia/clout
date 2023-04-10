@@ -13,23 +13,28 @@
 .container{
   display: flex;
 }
-.client{
-   justify-content: left;
-   margin-left: 1vw;
-}
+
 
 .footerDescription {
   font-size: 1.3rem;
-  margin-left: 4vw;
-  line-height: 5vw;
+  margin-left: 3vw;
+ margin-top: 6%;
   
 }
+.footerDescription2{
+  font-size: 1.3rem;
+  margin-left: 38.5vw;
+ margin-top: 3%;
+  
 
-.footerlist {
+}
+
+.footerlist1{
   padding: 0 auto;
   padding-left: 0 !important; 
-  display: flex;
   justify-content: center;
+  margin-bottom: 25%;
+  margin-left: 3vw;
 }
 
 .footerItem {
@@ -46,14 +51,12 @@
 
 }
 
-.connect{
-  margin-left: 45vw;
-   
-}
+
 
 .footerlist2 {
   display: flex;
-  margin-left: 2vw;
+  margin-left: 35vw;
+  margin-top: 2%;
 }
 
 .footerlink1 {
@@ -118,18 +121,18 @@
     padding: 0px;
     text-align: center;
   }
-  .connect{
-    margin-left: 0vw;
-    justify-content: center;
-    text-align:center;
-    align-items: center;
+  .footerDescription2{
+    text-align: center;
+    margin-left: 0;
+    
+  
   }
   .footerlist2 {
     justify-content: center;
     text-align:center;
     align-items: center;
-    margin-left: 0vw;
-    padding-left: 3vw;
+    margin-left: 0;
+    
   }
   .footerBelow{
     justify-content: center;
