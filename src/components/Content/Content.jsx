@@ -5,17 +5,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import product from "../json/product.json"
-
-
-
+import { priceArray } from "../cartsummary/prices";
+// import AddToBasket from "../addtobasket"
 
 
 export default function Content() {
     const onChange = (value) => {
         console.log('changed', value);
       };
-    
-     
       var settings = {
         dots: true,
         infinite: false,
@@ -97,72 +94,40 @@ export default function Content() {
                             <div className= {style.sort_container}>
                                 <div className = {style.sort_col}>
                                     <div className={style.st_box}>
-                                        <div className ={style.sort_text}>1F 搖滾區</div>
+                                        <div className ={style.sort_text}>
+                                            {priceArray.map((price, id)=>(
+                                                <h2 key={id}>{price.name}</h2>
+                                            ))}
+                                        </div>
                                     </div>
-
-                                    <Space className = {style.number}>
-   
+                                    <div className={style.counter}>
+                                         <Space className = {style.number}>
                                      <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
-    
                                     </Space>
-                                
-                                    
-                                    
-                                    
-                                    <div className={style.sort_money}>$400</div>
-                                </div>  
-
-                                <div className = {style.sort_col}>
-                                    <div className={style.st_box}>
-                                        <div className ={style.sort_text}>1F 搖滾區+酒水暢飲</div>
+                                    <Space className = {style.number}>
+                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                    </Space>
+                                    <Space className = {style.number}>
+                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                    </Space>
+                                    <Space className = {style.number}>
+                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                    </Space>
                                     </div>
-                                    
-                                
-                                    <Space className = {style.number}>
-   
-                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
-    
-                                    </Space>
-
-                                    <div className={style.sort_money}>$500</div>
-                                </div>  
-
-                                <div className = {style.sort_col}>
-                                    <div className={style.st_box}>
-                                        <div className ={style.sort_text}>1F 後排站台</div>
-                                    </div>
-                                
-                                    <Space className = {style.number}>
-   
-                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
-    
-                                    </Space>
-
-                                    <div className={style.sort_money}>$350</div>
-                                </div>  
-
-                                <div className = {style.sort_col}>
-                                    <div className={style.st_box}>
-                                        <div className ={style.sort_text}>1F 後排站台+酒水暢飲</div>
-                                    </div>
-                                
-                                    <Space className = {style.number}>
-   
-                                     <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
-    
-                                    </Space>
-
-                                    <div className={style.sort_money}>$450</div>
                                    
-                                    
+                                    <div className={style.sort_money}>
+                                          {priceArray.map((price, id)=>(
+                                                <h2 key={id}>{price.price}</h2>
+                                            ))}
+                                    </div>
                                 </div>  
-                            </div>
+
                             
                              <button className={style.btn_buy} type="button" name="button">購買</button>    
 
-                            
+                            </div>
                            
-                        </div>
+                            </div>
            
                     </div>
                  

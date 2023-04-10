@@ -35,8 +35,8 @@ export default function header({ title})
                     </div>
                <CartSummary/>  
                     
-   </div>
-   <div class={style.rwdshit}><NavBar /></div>
+            </div>
+                <div class={style.rwdshit}><NavBar /></div>
         </header>
     );
 
