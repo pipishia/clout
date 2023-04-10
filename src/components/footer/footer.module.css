@@ -113,6 +113,7 @@
   .footerAbove{
     justify-content: center;
     text-align:center;
+    height: 5%;
   }
   .container{
     flex-direction: column;
@@ -127,11 +128,16 @@
     
   
   }
+  .client{
+    height: 55%;
+  }
   .footerlist2 {
     justify-content: center;
     text-align:center;
     align-items: center;
-    margin-left: 0;
+    margin-left: 0%;
+    margin-right: 8%;
+    
     
   }
   .footerBelow{
