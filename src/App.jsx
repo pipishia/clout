@@ -5,10 +5,10 @@ import Home from './pages/home';
 import './App.css';
 import 'antd/dist/reset.css'
 
-// import Activity from './pages/Activity'
+import Activity from './pages/Activity'
 function App() {
   return (
-    <Home />
+    <Activity />
 
   );
 }

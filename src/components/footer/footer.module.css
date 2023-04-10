@@ -1,21 +1,22 @@
 
 
 .footerAbove {
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
-  background-color: #b3c9db;
+  background-color: #2d659278;
   color: white;
   margin: 0;
+  height:200px
 }
 
 .footerDescription {
   font-size: 1.3rem;
-  margin: 0;
+  margin-left: 8%;
   padding: 0 30px;
   line-height: 40px;
   text-align: center;
-  padding-bottom: 30px;
   align-self: center;
+  font-weight: 650;
 }
 
 .footerlist {
@@ -24,20 +25,60 @@
   display: flex;
   justify-content: center;
 }
+.footerlist2 {
+ 
+  
+  display: flex;
+  
+}
 
 .footerItem {
   list-style: none;
-  margin: 0 10px;
+  color: white;
 }
+.footerabout{
+    margin-bottom:0;
+    font-size: 15px;
+    text-indent: 0.5rem;
+    line-height: 1.5rem;
+    font-weight:700;
+    color: white;
+   
 
-.footerlink {
+
+
+}
+.footerlink1 {
   color: white;
   text-decoration: none;
   display: block;
   width: 50px;
   height: 50px;
-  border: 2px solid #fff;
-  border-radius: 100%;
+  border: 3px solid #fff;
+  border-radius: 60%;
+  text-align: center;
+  
+}
+.footerlink2 {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 60%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 45px;
+}
+.footerlink3{
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 60%;
   text-align: center;
   font-size: 20px;
   line-height: 45px;
@@ -54,8 +95,7 @@
     text-align: justify;
   }
   .footerAbove {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    
   }
 }
 
