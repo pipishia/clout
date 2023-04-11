@@ -1,12 +1,13 @@
 import style from './Content.module.css'
-import { Select } from "antd";
+import { Row, Col, Select } from "antd";
 import { InputNumber, Space } from 'antd';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { priceArray } from "../cartsummary/prices";
-import AddToBasket from "../AddToBasket/AddToBasket"
+// import AddToBasket from "../AddToBasket/AddToBasket"
 import product from '../json/product.json'
+
 const { Option } = Select;
 
 export default function Content() {
@@ -100,20 +101,29 @@ export default function Content() {
                                         </div>
                                     </div>
                                     <div className={style.counter}>
-                                    <AddToBasket product={product}   />
-                                    <AddToBasket product={product}  />
-                                    <AddToBasket  product={product} />
-                                    <AddToBasket product={product}  />
-                                    </div>
-                                   
+                                          <Space className = {style.number}>
+                                      <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                     </Space>
+                                     <Space className = {style.number}>
+                                      <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                     </Space>
+                                    <Space className = {style.number}>
+                                      <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                   </Space>
+                                   <Space className = {style.number}>
+                                    <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                    </Space>
+                                   </div>
+
                                     <div className={style.sort_money}>
                                           {product.map((product, id)=>(
                                                 <h2 key={id}>{product.price}</h2>
                                             ))}
                                     </div>
+                                 
                                 </div>  
 
-                            
+                                <button className={style.btn_buy} type="button" name="button">購買</button>  
                           
 
                             </div>
