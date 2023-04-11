@@ -2,7 +2,7 @@ import { Button, notification } from "antd"
 import { useDispatch } from "react-redux";
 import { addCartItems } from "../../redux/cartSlice";
 import styles from "./addtobasket.module.css"
-import { Basket } from "../Icons";
+import { Basket } from "../cartsummary/icon";
 
 export default function AddToCart({ product, qty }) {
   const dispatch = useDispatch();
