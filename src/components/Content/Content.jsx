@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { priceArray } from "../cartsummary/prices";
-import AddToBasket from "../AddToBasket/AddToBasket"
+import AddToBasket from "../addtobasket/addtobasket"
 import product from '../json/product.json'
 const { Option } = Select;
 
