@@ -3,7 +3,7 @@
   height: 25vh;
   color: #fff;
   display: flex;
-  background: url(../images/sky.gif)no-repeat;
+  background: url(/images/sky.gif)no-repeat;
   background-size: cover;
 }
 .header2 {

@@ -15,18 +15,15 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="activity">
-        <Route path="/activity" element={<Activity />} />
+      <Route path="activity"> 
+        < Route path="id/:productId"  element={<Activity />} />
       </Route>
-      <Route path="login">
-        <Route path="/login" element={<Login />} />
-      </Route>
+      <Route path="/login" element={<Login />} />
     </Routes>
   </BrowserRouter>  
    </Provider>
   );
 }
-
 
 
 export default App
