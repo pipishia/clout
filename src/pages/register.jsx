@@ -1,17 +1,17 @@
 import Header from "../components/header/header"
 import Footer from "../components/footer/footer"
-import Login from "../components/login/login"
+import Register from "../components/register/register"
 
-function login() {
+function Register() {
 
     return (
         <div className="mainLayout">
         <Header/>
         <div className="layoutContent container">
-           <Login />
+           <Register />
         </div>
         <Footer className="layoutFooter" />
      </div>
     );
 }
-export default login
+export default Register
