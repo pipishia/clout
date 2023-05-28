@@ -26,6 +26,8 @@ const Logincard = ({ redirect }) => {
   }, [isSuccess, redirect]); 
 
   return (
+    // <div Name="alllogin">
+    //   <div className={styles.animate}></div>
     <Form
       name="normal_login"
       className={styles.loginForm}
@@ -115,6 +117,7 @@ const Logincard = ({ redirect }) => {
         )}
       </Form.Item>
     </Form>
+    // </div>
   );
 };
 

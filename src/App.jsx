@@ -26,8 +26,9 @@ function App() {
       <Route path="activity"> 
         < Route path="id/:productId"  element={<Activity />} />
       </Route> 
-      <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path="login" element={<Login />} />
+      
       {/* <Route path="auth">
      
       
