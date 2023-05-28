@@ -3,7 +3,7 @@ import './navbar.css';
 import { Row, Col } from 'antd';
 import 'antd/dist/reset.css'
 import { useState } from "react";
-import CartSummary from '../cartsummary/cart'
+// import CartSummary from '../cartsummary/cart'
 const Nav =()=>{
     const [navOpen, setnavOpen] = useState(false);
 return(

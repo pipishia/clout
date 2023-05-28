@@ -6,9 +6,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import ticket from '../json/ticket.json'
+import AddToCart from "../AddToBasket/AddToBasket"
+import {useState} from 'react';
 const { Option } = Select;
 
 export default function Content({ product }) {
+    const [qty, setQty] = useState(product.stock > 0 ? 1 : 0);
+    const [qty0 ,setQty0] = useState(product.stock > 0 ? 1 : 0);
+    const [qty1 ,setQty1] = useState(product.stock > 0 ? 1 : 0);
+    const [qty2 , setQty2] = useState(product.stock > 0 ? 1 : 0);
+    const [qty3,setQty3] = useState(product.stock > 0 ? 1 : 0);
     const onChange = (value) => {
         console.log('changed', value);
       };
@@ -91,16 +98,46 @@ export default function Content({ product }) {
                                     </div>
                                     <div className={style.counter}>
                                           <Space className = {style.number}>
-                                      <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                              
+                                      <InputNumber min={0} max={100000} defaultValue={qty0} onChange={val => setQty0(val)} />
+                                      {[...Array(product.tickets[0].countInStock).keys()].map((x) => (
+                                            <Option key={x + 1} value={x + 1}>
+                                                {x + 1}
+                                            </Option>
+                                            ))}
+                                      <p className={style.status}>
+                                        {product.tickets[0].countInStock > 0 ? "尚有座位" : "已售完"} </p>
                                      </Space>
                                      <Space className = {style.number}>
-                                      <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                      <InputNumber min={0} max={100000} defaultValue={qty1} onChange={val => setQty1(val)} />
+                                      {[...Array(product.tickets[1].countInStock).keys()].map((x) => (
+                                            <Option key={x + 1} value={x + 1}>
+                                                {x + 1}
+                                            </Option>
+                                            ))}
+                                      <p className={style.status}>
+                                        {product.tickets[1].countInStock > 0 ? "尚有座位" : "已售完"} </p>
                                      </Space>
                                     <Space className = {style.number}>
-                                      <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                      <InputNumber min={0} max={100000} defaultValue={qty2} onChange={val => setQty2(val)} />
+                                      {[...Array(product.tickets[3].countInStock).keys()].map((x) => (
+                                            <Option key={x + 1} value={x + 1}>
+                                                {x + 1}
+                                            </Option>
+                                            ))}
+                                      <p className={style.status}>
+                                        {product.tickets[2].countInStock > 0 ? "尚有座位" : "已售完"} </p>
                                    </Space>
                                    <Space className = {style.number}>
-                                    <InputNumber min={0} max={100000} defaultValue={0} onChange={onChange} />
+                                    <InputNumber min={0} max={100000} defaultValue={qty3} onChange={val => setQty3(val)} />
+                                            {[...Array(product.tickets[3].countInStock).keys()].map((x) => (
+                                            <Option key={x + 1} value={x + 1}>
+                                                {x + 1}
+                                            </Option>
+                                            ))}
+                                      
+                                    <p className={style.status}>
+                                        {product.tickets[3].countInStock > 0 ? "尚有座位" : "已售完"} </p>
                                     </Space>
                                    </div>
 
@@ -111,9 +148,13 @@ export default function Content({ product }) {
                                     </div>
                                  
                                 </div>  
-
-                                <button className={style.btn_buy} type="button" name="button">購買</button>  
-                          
+                             
+        
+                  <p className={style.qty}>
+                     Total Price: $ {product.tickets[0].price * qty0+product.tickets[1].price * qty1+product.tickets[2].price * qty2+product.tickets[3].price * qty3}
+                  </p>
+                                            
+                        <AddToCart total={product.tickets[0].price * qty0+product.tickets[1].price * qty1+product.tickets[2].price * qty2+product.tickets[3].price * qty3} product={product} qty={qty0+qty1+qty2+qty3} qty0={qty0} qty1={qty1} qty2={qty2} qty3={qty3}/>
 
                             </div>
                            

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Badge, theme } from "antd";
-import BasketModal from "../BasketModal/BasketModal"
-import { CartIcon } from "./icon";
-import styles from "./cartsummary.module.css"
+import { CartIcon } from "./Icons";
+import styles from "./ShoppingCart.module.css"
 import { selectCartItems } from "../../redux/cartSlice";
+import BasketModal from "../BasketMoal/BasketModal"
 
-export default function CartSummary() {
+export default function ShoppingCart() {
   const { token: { colorTextBase }} = theme.useToken();
   const [isOpen, setIsOpen] = useState(false)
   const cartItems = useSelector(selectCartItems);
@@ -21,7 +21,7 @@ export default function CartSummary() {
         <Badge count={count} color="#6366F2" style={{color: 'white'}}>
           <CartIcon size={32} color={colorTextBase} />
         </Badge>
-        <p className={styles.cartText}> Shopping basket </p>
+        <p className={styles.cartText}>  </p>
       </nav>    
       <BasketModal
         isOpen={isOpen}

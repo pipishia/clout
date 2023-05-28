@@ -1,6 +1,6 @@
 /* Cart */
 .btn {
-    width: 50%;
+    width: 100%;
     font-size: 1.1rem;
     font-weight: lighter;
     padding: 0.7rem;
@@ -54,3 +54,4 @@
     font-weight: bold;
     text-align: right;
   }
+  
