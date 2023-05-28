@@ -25,9 +25,15 @@ const Logincard = ({ redirect }) => {
     }
   }, [isSuccess, redirect]); 
 
+  const [count, setCount] = useState(0);
+
   return (
-    // <div Name="alllogin">
-    //   <div className={styles.animate}></div>
+    <div Name="alllogin">
+      <div className={styles.animate}>
+      {/* <Refresh onClick={() => setCount(count + 1)} />
+      <div className="example-container">
+        <Example key={count} />
+      </div> */}
     <Form
       name="normal_login"
       className={styles.loginForm}
@@ -117,11 +123,12 @@ const Logincard = ({ redirect }) => {
         )}
       </Form.Item>
     </Form>
-    // </div>
+     </div></div>
   );
 };
-
 export default Logincard;
+// render(<Logincard />, document.getElementById("root"));
+
 // import React, { useState } from "react";
 // import  "./text.css";
 
