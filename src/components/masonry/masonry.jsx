@@ -1,5 +1,4 @@
 import React from "react"
-import  './masonry.css'
 import product from '../json/product.json'
 import Productitems from "./productitem";
 

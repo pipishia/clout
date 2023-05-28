@@ -56,7 +56,7 @@
   padding-top: 1%;
   padding-bottom: 1%;
   margin-top: 5%;
-  width: 70%;
+  width: 80%;
   border-radius: 2%;
   margin-bottom: 50px;
   justify-content: center;
@@ -90,13 +90,14 @@
   font-weight: 1000;
 
 }
+
 .sort_container{
  
   background-color: rgb(193, 232, 248);
   border-radius: 4px;
   height:50%;
   margin-top: 2%;
-  width:80%;
+  width:90%;
   padding-top: 2%;
   padding-bottom: 0.1%;
   margin-left: 1%;
@@ -112,6 +113,7 @@
   margin-bottom: 15px;
   
   
+  
 }
 .info_text{
   margin-bottom:0;
@@ -125,26 +127,28 @@
 
 .sort_text{
   margin-bottom:0;
-  font-size: 15px;
+  font-size: 1vw;
   text-indent: 0.5rem;
   line-height: 1.5rem;
   font-weight:700;
   white-space:nowrap;
- 
+
 
 
 }
 .sort_money{
 margin-bottom:0;
-  font-size: 15px;
+font-size:1vw;
   text-indent: 0.5rem;
   line-height: 1.5rem;
   font-weight:700;
-  margin-left: 0;
-  
-  
-  
+  margin-left: 20px;
 
+}
+.number{
+  margin-left: 3vw;
+  margin-right: 1vw;
+  
 }
 .st_box{
 width: 160px;
@@ -287,6 +291,14 @@ top: 2rem;
 width: 90%;
 height:100%;
 
+}
+.status{
+  width:2vw;
+  font-size: 0.8rem;
+  
+}
+.qty{
+  margin-left: 25vw;
 }
 .counter{
 display: flex;

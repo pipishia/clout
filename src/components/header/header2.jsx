@@ -1,7 +1,7 @@
 import style from './header.module.css'
 import 'antd/dist/reset.css'
 import { useState } from "react";
-import CartSummary from '../cartsummary/cart'
+import ShoppingCart from '../ShoppingCart/ShoppingCart'
 import { Link } from "react-router-dom"
 import NavBar from '../navbar/navbar';
 
@@ -33,7 +33,7 @@ export default function header({ title})
                         <button class={style.loginbutton}> Login</button>
                         </Link>
                     </div>
-               <CartSummary/>  
+               <ShoppingCart/>  
                     
    </div>
    <div class={style.rwdshit}><NavBar /></div>
