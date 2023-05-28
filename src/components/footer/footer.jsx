@@ -21,9 +21,9 @@ export default function Footer() {
                 相關連結
               </h5>
               <ul className={style.footerlist2}>
-                <li className={style.footerItem}><img src = "/images/facebook-48.png" a href="" className={style.footerlink1}/><i className="fab fa-facebook-f"></i></li>
-                <li className={style.footerItem}><img src = "images/instagram-48.png" a href="" className={style.footerlink2}/><i className="fab fa-google-plus-g"></i></li>
-                <li className={style.footerItem}><img src = "/images/YOUTUBE.png" a href="" className={style.footerlink3}/><i className="fab fa-linkedin-in"></i></li>
+                <li className={style.footerItem}><img src = "/images/facebook-48.png" href="" className={style.footerlink1}/><i className="fab fa-facebook-f"></i></li>
+                <li className={style.footerItem}><img src = "/images/instagram-48.png" href="" className={style.footerlink2}/><i className="fab fa-google-plus-g"></i></li>
+                <li className={style.footerItem}><img src = "/images/YOUTUBE.png" href="" className={style.footerlink3}/><i className="fab fa-linkedin-in"></i></li>
               </ul>
             </div>
         </div>

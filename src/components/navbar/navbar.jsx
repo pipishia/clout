@@ -18,11 +18,11 @@ return(
                 </div>
             </div>
             <div className="nav-overlay" style={{top:navOpen ? "0%" : "-100%",transitionDelay:navOpen ? "0s" : "0s"}}>
-            <div class="wrap">
-                   <div class="flwrap">
-                           <div class="mainsearchinputitem">
+            <div className="wrap">
+                   <div className="flwrap">
+                           <div className="mainsearchinputitem">
                                <input type="text" />
-                               <button class="searchbutton"><img src="./images/search.png" width="20vw" ></img></button>
+                               <button className="searchbutton"><img src="./images/search.png" width="20vw" ></img></button>
                            </div>
                        </div>
                    </div>

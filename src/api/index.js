@@ -19,17 +19,15 @@ import {
 } from 'firebase/auth';
 // import _ from "lodash";
 // import products from "../json/product.json";
-
 const firebaseConfig = {
-    apikey:import.meta.env.VITE_FIREBASE_API_KEY ,
-    authDomain:import.meta.env.VITE_FIREBASE_AUTH_DOMAIN ,
-    projectId:import.meta.env.VITE_FIREBASE_PROJECTID ,
-    storageBucet:import.meta.env.VITE_FIREBASE_STORAGE_BUCKET ,
-    messagingSenderId:import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID ,
-    appId:import.meta.env.VITE_FIREBASE_APPID ,
-    mesasurementId:import.meta.env.VITE_FIREBASE_MEASUREMENTID ,
-
-  };
+  apiKey: "AIzaSyA1dyoXvDu1q-jl6sN6xq7fgAoy_WhIzX4",
+  authDomain: "clout-c1b54.firebaseapp.com",
+  projectId: "clout-c1b54",
+  storageBucket: "clout-c1b54.appspot.com",
+  messagingSenderId: "851540278551",
+  appId: "1:851540278551:web:270a237964f1098a698b52",
+  measurementId: "G-3Z3MNBP36Y"
+};
 
 const app_length = getApps().length > 0;
 
@@ -37,7 +35,7 @@ const app_length = getApps().length > 0;
 const app = app_length ? getApp() : initializeApp(firebaseConfig);
 
 // REFERENCE DB
-const db = getFirestore(app);
+const db = app_length ? getFirestore(app) : initializeFirestore(app, { experimentalForceLongPolling: true, });
 
 // REFERENCE AUTH
 const auth = app_length ? getAuth(app) : initializeAuth(app);
@@ -54,7 +52,7 @@ export const feedProducts = async () => {
   // ADD NEW DOCS
   products.forEach(async (product) => {
     const docRef = await doc(ProductsCollection);
-    await setDoc(docRef, { ...product, id: docRef.id });
+    await setDoc(docRef, { ...product, id: docRef.id,category: product.category.toUpperCase(), });
   });
 };
 
@@ -69,6 +67,27 @@ export const getProducts = async () => {
     return result
  };
 
+ export const getProductById = async ({ queryKey }) => {
+  const [id] = queryKey;
+  const docRef = doc(db, "products", id);
+  const docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
+
+export const getProductsByCategory = async ({ queryKey }) => {
+  const [category] = queryKey;
+  const q = await query(
+    productsCollection,
+    where("category", "==", category.toUpperCase())
+  );
+  let querySnapshot = await getDocs(q);
+  // Convert the query to a json array.
+  let result = [];
+  querySnapshot.forEach(async (product) => {
+    await result.push(product.data());
+  });
+  return result;
+};
  export const getUserInfo = async () => {
   const storedUser = localStorage.getItem("user");
   const user = auth?.currentUser || JSON.parse(storedUser) || null;

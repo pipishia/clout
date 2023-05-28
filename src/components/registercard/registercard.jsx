@@ -6,7 +6,7 @@ import { WarningOutlined } from "@ant-design/icons";
 import { useRegisterWithEmailPassword } from "../../react-query";
 import styles from "./registercard.module.css"
 
-const RegisterCard = ({ redirect }) => {
+const Registercard = ({ redirect }) => {
 
   const { mutate, error, isLoading, isError, isSuccess, data } = useRegisterWithEmailPassword();
 
@@ -155,4 +155,4 @@ const RegisterCard = ({ redirect }) => {
     </Form>
   );
 };
-export default RegisterCard;
+export default Registercard;
