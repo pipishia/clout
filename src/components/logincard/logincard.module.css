@@ -1,7 +1,11 @@
+/* .animate{
+  width: 100%;
+  height: 250vh;
+
+
+} */
 .loginForm {
   padding: 1rem;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 20rem;
 }
 
