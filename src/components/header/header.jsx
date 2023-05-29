@@ -15,7 +15,7 @@ export default function header({ title }) {
             <div className={style.navbar}>
                 <a>  <h1 className={style.about}>about us{title}</h1></a>
                 < Link to='/' className={style.link}>
-                    <h1 className={style.home}>home{title}</h1>
+                    <h1 className={style.home}>homse{title}</h1>
                 </Link>
 
                 <div className={style.wrap}>
