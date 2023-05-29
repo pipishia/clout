@@ -2,7 +2,7 @@ import { Modal, Button, Select } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addCartItems, removeCartItems } from "../../redux/cartSlice";
-import styles from "./basketmodal.module.css"
+import styles from "./BasketModal.module.css"
 import { CartIcon } from "./icon";
 import { selectCartItems } from "../../redux/cartSlice";
 import { useUserInfo } from "../../react-query";
