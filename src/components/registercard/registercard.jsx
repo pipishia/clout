@@ -6,7 +6,7 @@ import { WarningOutlined } from "@ant-design/icons";
 import { useRegisterWithEmailPassword } from "../../react-query";
 import styles from "./registercard.module.css"
 
-const Registercard = ({ redirect }) => {
+const RegisterCard = ({ redirect }) => {
 
   const { mutate, error, isLoading, isError, isSuccess, data } = useRegisterWithEmailPassword();
 
@@ -22,7 +22,7 @@ const Registercard = ({ redirect }) => {
     if (isSuccess) {
       navigate(redirect);
     }
-  }, [isSuccess, redirect]); 
+  }, [isSuccess, redirect ,navigate]); 
 
   return (
     <Form
@@ -33,7 +33,7 @@ const Registercard = ({ redirect }) => {
       scrollToFirstError
     >
       <Form.Item
-        name="username"
+        name="name"
         label="Your Name"
         tooltip="What do you want others to call you?"
         rules={[
@@ -141,18 +141,18 @@ const Registercard = ({ redirect }) => {
         Already have an account?{" "}
         <Link to={`/auth/login?redirect=${redirect}`}>Login</Link>
         {!isError ? (
-          <></>
+          <div></div>
         ) : (
           <div className={styles.loginForm__errorWrap}>
             <h3 className={styles.loginForm__errorTitle}>
               <WarningOutlined  />
               {"  "}There was a problem
             </h3>
-            <p className={styles.loginForm__errorMessage}>{error.response.data?.detail}</p>
+            <p className={styles.loginForm__errorMessage}>{error.message}</p>
           </div>
         )}
       </Form.Item>
     </Form>
   );
 };
-export default Registercard;
+export default RegisterCard;

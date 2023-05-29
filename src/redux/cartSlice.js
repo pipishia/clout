@@ -24,11 +24,15 @@ const cartSlice = createSlice({
   },
 });
 
+
 // export state to global
 export const selectCartItems = (state) => state.cart.cartItems;
+export const selectShippingAddress = (state) => state.cart.shippingAddress;
+export const selectPaymentMethod = (state) => state.cart.paymentMethod;
+export const selectPrice = (state) => state.cart.price;
 
 // export actions to global
-export const { addCartItems, removeCartItems } = cartSlice.actions;
+export const { addCartItems, removeCartItems, saveShippingAddress, savePaymentMethod, savePrice } = cartSlice.actions;
 
 // export reducer to global
 export default cartSlice.reducer;

@@ -4,7 +4,7 @@ import { useState } from "react";
 import ShoppingCart from '../ShoppingCart/ShoppingCart'
 import { Link } from "react-router-dom"
 import NavBar from '../navbar/navbar';
-
+import UserInfo from '../userinfo/userinfo'
 export default function header({ title }) {
     const [isOnTouch, setIsOnTouch] = useState(false);
     return (
@@ -26,12 +26,9 @@ export default function header({ title }) {
                         </div>
                     </div>
                 </div>
-                <div className={style.user}>
-                    <button className={style.signbutton}>Sign Up</button>
-                    < Link to='/login' className={style.link}>
-                        <button className={style.loginbutton}> Login</button>
-                    </Link>
-                </div>
+            
+                    <UserInfo/>
+                 
                 <ShoppingCart />
 
             </div>

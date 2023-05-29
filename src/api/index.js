@@ -17,16 +17,16 @@ import {
   createUserWithEmailAndPassword,
   initializeAuth,
 } from 'firebase/auth';
-// import _ from "lodash";
-// import products from "../json/product.json";
+import _ from "lodash";
+import products from "../components/json/product.json";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyA1dyoXvDu1q-jl6sN6xq7fgAoy_WhIzX4",
-  authDomain: "clout-c1b54.firebaseapp.com",
-  projectId: "clout-c1b54",
-  storageBucket: "clout-c1b54.appspot.com",
-  messagingSenderId: "851540278551",
-  appId: "1:851540278551:web:270a237964f1098a698b52",
-  measurementId: "G-3Z3MNBP36Y"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECTID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APPID,
 };
 
 const app_length = getApps().length > 0;
@@ -41,33 +41,39 @@ const db = app_length ? getFirestore(app) : initializeFirestore(app, { experimen
 const auth = app_length ? getAuth(app) : initializeAuth(app);
 
 // REFERENCE COLLECTION
-const ProductsCollection = collection(db, "product"); 
+const productsCollection = collection(db, "products");
 
 export const feedProducts = async () => {
   // DELETE ALL EXISTING DOCS
-  const querySnapshot = await getDocs(ProductsCollection);
+  const querySnapshot = await getDocs(productsCollection);
   querySnapshot.forEach(async (product) => {
-    await deleteDoc(doc(db, "product", product.id));
+    await deleteDoc(doc(db, "products", product.id));
   });
   // ADD NEW DOCS
   products.forEach(async (product) => {
-    const docRef = await doc(ProductsCollection);
-    await setDoc(docRef, { ...product, id: docRef.id,category: product.category.toUpperCase(), });
+    const docRef = doc(productsCollection);
+    const category = product.category ? product.category.toUpperCase() : "";
+    await setDoc(docRef, {
+      ...product,
+      id: docRef.id,
+      category: category,
+    });
   });
+  
 };
 
 export const getProducts = async () => {
-    const querySnapshot = await getDocs(ProductsCollection);
-    // Convert query to a json array.
-    let result = [];
-    querySnapshot.forEach(async (product) => {
-       await result.push(product.data());
-    });
-    console.log({ result });
-    return result
- };
+  let querySnapshot = await getDocs(productsCollection);
 
- export const getProductById = async ({ queryKey }) => {
+  // Convert the query to a json array.
+  let result = [];
+  querySnapshot.forEach(async (product) => {
+    await result.push(product.data());
+  });
+  return result;
+};
+
+export const getProductById = async ({ queryKey }) => {
   const [id] = queryKey;
   const docRef = doc(db, "products", id);
   const docSnap = await getDoc(docRef);
@@ -88,7 +94,8 @@ export const getProductsByCategory = async ({ queryKey }) => {
   });
   return result;
 };
- export const getUserInfo = async () => {
+
+export const getUserInfo = async () => {
   const storedUser = localStorage.getItem("user");
   const user = auth?.currentUser || JSON.parse(storedUser) || null;
 
@@ -101,12 +108,26 @@ export const getProductsByCategory = async ({ queryKey }) => {
       email: user.email,
       ...userDoc,
     };    
-  } else {
+  }
+   else {
     return {}
   }
 }
 
+export const toggleFavoriteProduct = async ({productId, uid}) => {
+  const docRef = doc(db, "users", uid);
+  const docSnap = await getDoc(docRef);
+  const userDoc = docSnap.data();
+  const favorites = userDoc?.favorites || [];
+  if(favorites.length === _.pull(favorites,productId).length){
+    favorites.push(productId);  
+  }
+  await updateDoc(docRef, { favorites }); 
+  return favorites;
+}
+
 export const login = async ({ email, password }) => {
+
   await signInWithEmailAndPassword(
     auth,
     email,
@@ -141,9 +162,7 @@ export const updateUserInfo = async ({ name, adrs, tel, uid }) => {
   localStorage.setItem("user", JSON.stringify(user));
 }
 
-
 export const logout = async () => {
   await auth.signOut();
   localStorage.removeItem("user");
 }
-

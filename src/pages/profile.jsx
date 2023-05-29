@@ -1,9 +1,9 @@
 import Header from "../components/header/header"
 import Footer from "../components/footer/footer"
-import RegisterCard from "../components/registercard/registercard"
+import ProfileCard from "../components/ProfileCard/ProfileCard"
 import { useSearchParams } from 'react-router-dom';
 
-function register() {
+function login() {
     const [searchParams] = useSearchParams();
     const redirect = searchParams.get('redirect');
 
@@ -11,10 +11,11 @@ function register() {
         <div className="mainLayout">
         <Header/>
         <div className="layoutContent container">
-           <RegisterCard  redirect={redirect}/>
+        <ProfileCard redirect={redirect}/>
         </div>
         <Footer className="layoutFooter" />
      </div>
     );
 }
-export default register;
+
+export default login;

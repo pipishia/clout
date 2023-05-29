@@ -22,7 +22,7 @@ return(
                    <div className="flwrap">
                            <div className="mainsearchinputitem">
                                <input type="text" />
-                               <button className="searchbutton"><img src="./images/search.png" width="20vw" ></img></button>
+                               <button className="searchbutton"><img src="/images/search.png" width="20vw" ></img></button>
                            </div>
                        </div>
                    </div>
