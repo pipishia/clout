@@ -1,10 +1,8 @@
 import Header2 from "../components/header/header2"
 import Footer from "../components/footer/footer"
-import LoginCard from "../components/logincard/logincard"
-// import Animate from"../components/logincard/index"
+import Register from "../components/registercard/registercard"
 import { useSearchParams } from 'react-router-dom';
-function login() {
-
+function register() {
     const [searchParams] = useSearchParams();
    const redirect = searchParams.get('redirect');
 
@@ -12,11 +10,10 @@ function login() {
         <div className="mainLayout">
         <Header2/>
         <div className="layoutContent container">
-        <LoginCard redirect={redirect}/>
-        {/* <Animate/> */}
+           <Register redirect={redirect}/>
         </div>
         <Footer className="layoutFooter" />
      </div>
     );
 }
-export default login;
+export default register;
