@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Badge, theme } from "antd";
-import { CartIcon } from "./Icons";
+import { CartIcon } from "./icons";
 import styles from "./ShoppingCart.module.css"
 import { selectCartItems } from "../../redux/cartSlice";
 import BasketModal from "../BasketMoal/BasketModal"
