@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Input, Button } from "antd";
-import styles from "./profilecard.module.css"
+import styles from "./ProfileCard.module.css"
 import { useUpdateProfile, useLogout, useUserInfo } from "../../react-query";
 
 const ProfileCard = ({ redirect }) => {
