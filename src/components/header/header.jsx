@@ -14,7 +14,7 @@ export default function header({ title})
             
             <img className={style.clout} src="./images/cloutlogo.png" alt="clout" />
              <div class={style.navbar}>  
-    <a>  <h1 className={style.about}>about us{title}</h1></a>
+    <a>  <h1 className={style.about}>About us{title}</h1></a>
     < Link to='/' className="homelink">
             <a>  <h1 className={style.home}>home{title}</h1></a>
         </Link>
