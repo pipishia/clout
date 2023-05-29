@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import ticket from '../json/ticket.json'
-import AddToCart from "../AddToBasket/AddToBasket"
+import AddToCart from "../AddToBasket/addtobasket"
 import {useState} from 'react';
 const { Option } = Select;
 
