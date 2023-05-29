@@ -57,7 +57,7 @@
 .user {
   width: 6vh;
   height: 6vh;
-  margin-left: 3vw;
+  margin-left: 12vw;
 }
 
 
@@ -133,6 +133,7 @@
 /*searchbar*/
 .body{
   background-color:#6cace4;
+  margin-right: -10vw;
 }
 .wrap {
     border-radius: 1px;

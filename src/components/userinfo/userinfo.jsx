@@ -15,6 +15,7 @@ export default function UserInfo(props) {
    };
 
    return (
+
       <div onClick={goToProfile} style={{ ...props.style }} className={styles.userInfo} >
          {userInfo
             ? <UserOutlined className={styles.userInfoOutlined} />
@@ -22,10 +23,11 @@ export default function UserInfo(props) {
          }
          <p className={styles.userInfoText}>
             {!!userInfo?.name
-               ? `${userInfo.name}'s`
-               : `請登入`
+               ? `${userInfo.name}`
+               : `LOGIN`
             }
          </p>
       </div>
+
    );
-}
+         }

@@ -1,24 +1,33 @@
 import { Modal, Button, Select } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addCartItems, removeCartItems } from "../../redux/cartSlice";
 import styles from "./basketmodal.module.css"
 import { CartIcon } from "./icon";
 import { selectCartItems } from "../../redux/cartSlice";
+import { useUserInfo } from "../../react-query";
 const { Option } = Select;
 
 
 export default function BasketModal({ isOpen, toggleModal,total }) {
     const dispatch = useDispatch();
     const cartItems = useSelector(selectCartItems);
+    const { data: userInfo } = useUserInfo();
  
+    
+    const navigate = useNavigate();
     const handleCancel = () => toggleModal(!isOpen);
     const getTotalPrice = () => {
-       return (cartItems.length > 0) ?
-          cartItems.reduce((sum, item) => sum + item.price * item.qty0, 0)
-          : 0;
-    }
-    
+      return cartItems.reduce((sum, item) => sum + item.total, 0);
+    };
+    const checkoutHandler = () => {
+      handleCancel();
+      if (userInfo?.name)
+         navigate("/shopping/shipping")
+      else
+         navigate("/auth/login?redirect=/shopping/shipping");
+   }
+
 return (
     <Modal
        title="Shopping Basket"
@@ -30,7 +39,7 @@ return (
           <div>Cart is empty</div>
        ) : (
           cartItems.map(item => (
-             <li key={item.id} className={styles.item}>
+             <li key={item.id} className={styles.item} item={item}>
                 <Link to={`/activity/id/${item.id}`}>
                    <div onClick={handleCancel}>
                       <img className={styles.image} src={item.image} alt={item.name} />

@@ -1,7 +1,6 @@
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import style from './masonry.module.css'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
-import {motion} from"framer-motion";
 
 export default function Productitems({product}){
     
@@ -13,21 +12,13 @@ export default function Productitems({product}){
                      columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
                  >
                      <div  class={style.all}> 
-                        
                         <Masonry gutter="20px">
-                        
                             {product.map((product) => (
                             <>
-                            <motion.img className={style.images}
+                            <img className={style.images}
                                     key={product.id}
                                     src={product.images}
-                                    alt={product.name}
-                                    whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} 
-                                    initial={{opacity:0}}
-                                    animate={{opacity:1}}
-                                    transition={{duration:5}}
-                                    >
-                                    </motion.img>
+                                    alt={product.name} />
                                     <div className={style.inside}>
                                         <div className={style.text}>
                                             {product.name}
@@ -38,11 +29,9 @@ export default function Productitems({product}){
                                         </Link>
                                         </button>
                                     </div>
-                                    
                                     </>
                                     
                             ))}
-                            
                         </Masonry>
                      </div>
                     

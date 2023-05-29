@@ -1,16 +1,35 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { getProductById, getProducts, getProductsByCategory, login, register, getUserInfo, logout } from "../api";
+import {
+  getProductById,
+  getProducts,
+  getProductsByCategory,
+  toggleFavoriteProduct,
+  getUserInfo,
+  login,
+  register,
+  updateUserInfo,
+  logout,
+} from "../api";
 
 export const useProducts = () => {
   return useQuery([], getProducts);
 };
 
 export const useProductsByCategory = (category) => {
-   return useQuery([category], getProductsByCategory);
- };
+  return useQuery([category], getProductsByCategory);
+};
 
 export const useProductById = (productId) => {
   return useQuery([productId], getProductById);
+};
+
+export const useToggleFavoriteProduct = () => {
+  const queryClient = useQueryClient();
+  return useMutation(toggleFavoriteProduct, {
+    onSuccess: (data) => {
+      queryClient.invalidateQueries(["uid"]);
+    },
+  });
 };
 
 export const useUserInfo = () => {
