@@ -30,10 +30,7 @@ const Logincard = ({ redirect }) => {
   return (
     <div Name="alllogin">
       <div className={styles.animate}>
-      {/* <Refresh onClick={() => setCount(count + 1)} />
-      <div className="example-container">
-        <Example key={count} />
-      </div> */}
+     
     <Form
       name="normal_login"
       className={styles.loginForm}

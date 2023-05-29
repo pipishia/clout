@@ -1,6 +1,7 @@
 .images{
     position: relative;
     z-index:0;
+    border-radius: 3vh;
   }
   .images:hover{
     cursor:pointer;
