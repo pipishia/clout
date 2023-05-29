@@ -10,29 +10,6 @@ export default function header({ title }) {
     return (
 
         <header className={style.header}>
-<<<<<<< HEAD
-            
-            <img className={style.clout} src="./images/cloutlogo.png" alt="clout" />
-             <div class={style.navbar}>  
-    <a>  <h1 className={style.about}>About us{title}</h1></a>
-    < Link to='/' className="homelink">
-            <a>  <h1 className={style.home}>home{title}</h1></a>
-        </Link>
-      
-       <div class={style.wrap}>
-                   <div class={style.flwrap}>
-                           <div class={style.mainsearchinputitem}>
-                               <input type="text" />
-                               <button class={style.searchbutton}><img src="./images/search.png" width="18vw" ></img></button>
-                           </div>
-                       </div>
-                   </div>
-                   <div class={style.user}>
-                        <button class={style.signbutton}>Sign Up</button>
-                        < Link to='/login' className="link">
-                        <button class={style.loginbutton}> Login</button>
-                        </Link>
-=======
 
             <img className={style.clout} src="/images/cloutlogo.png" alt="clout" />
             <div className={style.navbar}>
@@ -47,7 +24,6 @@ export default function header({ title }) {
                             <input type="text" />
                             <button className={style.searchbutton}><img src="/images/search.png" width="18vw" /></button>
                         </div>
->>>>>>> 4955523ce3bd083e9446d3a3a72c728d74f3aebc
                     </div>
                 </div>
             
